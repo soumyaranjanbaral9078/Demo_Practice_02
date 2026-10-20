@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#f3f6fb">
-  <title>Student Information Form</title>
+  <title>Portfolio | Student Information</title>
   <style>
     :root {
       color-scheme: light;
@@ -42,6 +42,89 @@
     .intro p {
       margin: 0;
       color: #5c687a;
+    }
+
+    .portfolio {
+      margin-bottom: 24px;
+      padding: clamp(20px, 4vw, 30px);
+      border: 1px solid #dfeaf8;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #f5f8ff 0%, #ffffff 100%);
+      box-shadow: 0 10px 28px rgba(29, 70, 133, 0.08);
+    }
+
+    .portfolio-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .portfolio-header h2 {
+      margin: 0;
+      color: #173b70;
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
+    }
+
+    .portfolio-badge {
+      background: #eaf2ff;
+      color: #1d4f89;
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .portfolio-card {
+      padding: 20px;
+      border: 1px solid #dfeaf8;
+      border-radius: 14px;
+      background: #fff;
+    }
+
+    .portfolio-card h3 {
+      margin: 0 0 10px;
+      font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+      color: #173b70;
+    }
+
+    .portfolio-card p {
+      margin: 0 0 16px;
+      line-height: 1.7;
+      color: #45546b;
+    }
+
+    .portfolio-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .portfolio-tags span {
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: #eef4ff;
+      color: #234d8d;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .portfolio-link {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 10px;
+      background: #205da5;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .portfolio-link:hover {
+      background: #174980;
     }
 
     .card {
@@ -244,9 +327,33 @@
 <body>
   <main class="page">
     <header class="intro">
-      <h1>Student Information Form</h1>
-      <p>Enter the student details below, then view or save a copy as PDF.</p>
+      <h1>Portfolio Showcase</h1>
+      <p>Featured project and student profile details.</p>
     </header>
+
+    <section class="portfolio" aria-label="Portfolio project">
+      <div class="portfolio-header">
+        <h2>Featured Portfolio</h2>
+        <div class="portfolio-badge">Project 01</div>
+      </div>
+
+      <article class="portfolio-card">
+        <h3>Modern Student Portfolio Website</h3>
+        <p>
+          A clean, responsive portfolio experience designed to highlight academic strengths,
+          technical skills, and project work in a simple and professional layout.
+        </p>
+
+        <div class="portfolio-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>Responsive Design</span>
+          <span>Portfolio</span>
+        </div>
+
+        <a class="portfolio-link" href="#student-form">View Student Details</a>
+      </article>
+    </section>
 
     <form class="card" id="student-form">
       <fieldset>
